@@ -17,8 +17,10 @@ public class UsuarioDaoImpl implements UsuarioDao{
 
     @Override
 
-    public List<Usuario> getUsuario() {
+    public List<Usuario> getUsuarios() {
         String query = "From Usuario";
-        return entityManager.createQuery(query).getResultList();
+        List<Usuario> usuarios = entityManager.createQuery(query, Usuario.class).getResultList();
+        return  usuarios;
     }
+
 }
