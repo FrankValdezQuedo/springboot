@@ -8,6 +8,7 @@ async function registrarUsuario(){
   datos.apellido = document.getElementById('txtApellido').value;
   datos.email = document.getElementById('txtEmail').value;
   datos.password = document.getElementById('txtPassword').value;
+  datos.telefono = document.getElementById('txtTelefono').value;
 
    let repetircontra = document.getElementById('txtRepetirPassword').value;
 
@@ -24,4 +25,6 @@ async function registrarUsuario(){
     },
     body: JSON.stringify(datos)
   });
+  alert("La cuenta fue creada con exito.")
+  window.location.href = 'login.html';
 }
